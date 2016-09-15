@@ -1,0 +1,164 @@
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+.timeline {
+   margin: 50px 60px 0 60px;
+   list-style: none;
+   position: relative;
+}
+
+.timeline::before {
+   /* line goes here */
+   content: "";
+   top: 0;
+   bottom: 0;
+   left: 20%;
+   width: 12px;
+   position: absolute;
+   margin-left: -12px;
+   background-color: #afdcf8;
+}
+
+
+.timeline > li {
+   position: relative;
+   /*margin: 0 auto;*/
+}
+
+
+.timestamp {
+   position: absolute;
+   width: 25%;
+   padding-right: 100px;
+}
+
+.timestamp > p {
+   text-align: right;
+}
+
+.date {
+   font-size: 14px;
+   color: #bdd0db;
+}
+
+.time {
+   font-size: 46px;
+   color: #6cbfee;
+
+}
+
+
+
+
+
+
+/*
+inspiration for icon implementation from:
+http://stackoverflow.com/a/20782415 */
+.mobile::before {
+   font-family: FontAwesome;
+   content: "\f10b";
+      font-size: 36px;
+         line-height: 40px;
+}
+
+.desktop::before {
+   font-family: FontAwesome;
+   content: "\f108";
+   font-size: 24px;
+      line-height: 44px;
+}
+
+
+
+
+.icon {
+   width: 40px;
+   height: 40px;
+   left: 20%;
+   background-color: #46a4da;
+   border-radius: 50%;
+   box-shadow: 0 0 0 8px #afdcf8;
+   text-align: center;
+   position: absolute;
+   margin-left: -25px;
+}
+
+
+
+
+
+.event {
+   color: white;
+   background-color: #6cbfee;
+   margin: 0 0 16px 25%;
+   padding: 44px;
+   border-radius: 5px;
+}
+
+.event::after {
+   content: "";
+   position: absolute;
+   height: 0;
+   width: 0;
+   right: 75%;
+   top: 10px;
+   border: 10px solid transparent;
+   border-right-color: #6cbfee;
+
+}
+
+.event:hover {
+      background-color: #3594cb;
+}
+
+.event > .title:hover {
+border-bottom: 1px solid #a2d6f3;
+}
+
+.event:hover::after {
+border-right-color: #3594cb;
+}
+
+
+
+.title {
+ font-size: 28px;
+ font-weight: bold;
+ margin-top: 0;
+ margin-bottom: 20px;
+ padding-bottom: 10px;
+ border-bottom: 1px solid #9cd4f5;
+}
+
+.description {
+   font-size: 19px;
+   line-height: 1.3;
+   font-weight: 300;
+   -webkit-font-smoothing: antialiased; /* http://stackoverflow.com/a/11401631 */
+
+}
+
+/*
+li:hover .time{
+   color: #3594cb;
+}*/
+
+li:hover .icon{
+   box-shadow:  0 0 0 8px #3594cb;
+}
+
+
+
+
+
+/*#afdcf8*/
