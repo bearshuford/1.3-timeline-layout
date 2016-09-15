@@ -48,6 +48,7 @@ body {
 .date {
    font-size: 14px;
    color: #bdd0db;
+   transition: color 5s ease;
 }
 
 .time {
@@ -91,7 +92,7 @@ http://stackoverflow.com/a/20782415 */
    text-align: center;
    position: absolute;
    margin-left: -25px;
-   transition: box-shadow 1s ease;
+   transition: box-shadow 3s ease;
 }
 
 
@@ -125,11 +126,15 @@ li:hover .event{
 }
 
 li:hover .title {
-border-bottom: 1px solid #a2d6f3;
+   border-bottom: 1px solid #a2d6f3;
+}
+
+li:hover .date {
+   color: #3594cb;
 }
 
 .event:hover::after {
-border-right-color: #3594cb;
+   border-right-color: #3594cb;
 }
 
 
